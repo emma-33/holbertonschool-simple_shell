@@ -14,15 +14,20 @@ char *_strtok(char *str, const char *delim)
 
 	int i = 0;
 
-	token = strtok(str, " \n");
+	token = strtok(str, delim);
 
 	array = malloc(sizeof(char *) * 1024);
 
-	while (token)
+	if (array == NULL)
+		return (NULL);
+
+	while (token != NULL)
 	{
-		array[i] = token;
-		token = strtok(NULL, " \n");
+		array[i] = strdup(token);
+		token = strtok(NULL, delim);
 		i++;
 	}
+	array[i] = NULL;
+
 	return (token);
 }

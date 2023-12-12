@@ -1,8 +1,12 @@
-.TH Man page : 
+.TH Man page : hsh
 
 .SH NAME
 
+hsh
+
 .SH SYNOPSIS
+
+#include "main.h"
 
 .SH DESCRIPTION
 
