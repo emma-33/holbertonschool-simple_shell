@@ -4,7 +4,7 @@
  * 
  * Return: numbers of charactère
 */
-int getline(char *lineptr, size_t *n)
+int _getline(char *lineptr, size_t *n)
 {
     ssize_t count_char;
     
@@ -13,5 +13,5 @@ int getline(char *lineptr, size_t *n)
     {
         return (-1);
     }
-    
+
 }
