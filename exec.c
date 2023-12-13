@@ -2,9 +2,10 @@
 
 /**
 * execmd - executes a program
-* @argv: arguments
+* @argv: argument
+* Return: 0
 */
-void execmd(char *argv[])
+int execmd(char *argv[])
 {
 	char *command = NULL;
 
@@ -13,6 +14,8 @@ void execmd(char *argv[])
 
 	if (execve(command, argv, NULL) == -1)
 	{
-		perror("./hsh: No such file or directory");
+		perror("Couldn't execute");
+		return (-1);
 	}
+	return (0);
 }
