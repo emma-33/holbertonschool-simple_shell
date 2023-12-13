@@ -8,13 +8,16 @@ hsh
 
 #include "main.h"
 
+$ [COMMAND];
+
 .SH DESCRIPTION
+This program is a simplified version of the shell.
 
 .SH EXAMPLES
 
 .SH BUGS
 
-.SH AUTHOR
+.SH AUTHORS
 
 Djossou Edem
 Lateyron Emma
