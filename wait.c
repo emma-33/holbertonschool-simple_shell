@@ -9,7 +9,7 @@ int _wait(void)
     pid_t child_pid;
     int status;
     char **argv;
-    
+
     child_pid = fork();
     if (child_pid == -1)
     {
@@ -18,7 +18,8 @@ int _wait(void)
     }
     if (child_pid == 0)
     {
-        if (execmd(argv) == -1)
+    if (execmd(argv) == -1)
+    {
         return (1);
     }
     else
