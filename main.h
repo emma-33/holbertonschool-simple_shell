@@ -13,6 +13,5 @@ char *_strtok(char *str, const char *delim, ssize_t count_char);
 int execmd(char *argv[]);
 int _getline(char *lineptr, size_t *n);
 int wait(void);
-int fork(void);
 
 #endif
