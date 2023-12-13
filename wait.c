@@ -1,16 +1,14 @@
-#include <stdio.h>
-#include <unistd.h>
-#include <sys/types.h>
-#include <sys/wait.h>
+#include "main.h"
 /**
  * main - function wait
  * 
  * Return: Always 0
 */
-int wait(void)
+int _wait(void)
 {
     pid_t child_pid;
     int status;
+    char **argv;
     
     child_pid = fork();
     if (child_pid == -1)
@@ -20,7 +18,7 @@ int wait(void)
     }
     if (child_pid == 0)
     {
-        if (exercmd == -1)
+        if (execmd(argv) == -1)
         return (1);
     }
     else
