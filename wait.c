@@ -20,13 +20,12 @@ int wait(void)
     }
     if (child_pid == 0)
     {
-        printf("wait for me , wait for me\n");
-        sleep(3);
+        if (exercmd == -1)
+        return (1);
     }
     else
     {
         wait(&status);
-        printf("Oh, it's all better now\n");
     }
     return (0);
 }
