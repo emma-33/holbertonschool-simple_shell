@@ -14,7 +14,7 @@ char *_strtok(char *str, const char *delim, ssize_t count_char)
 	char **array;
 	char *str_copy = NULL;
 
-	int num_tokens = 0;
+	int num_tokens = 0, i = 0;
 
 	str_copy = malloc(sizeof(char) * count_char);
 
@@ -25,14 +25,15 @@ char *_strtok(char *str, const char *delim, ssize_t count_char)
 	strcpy(str_copy, str);
 	token = strtok(str_copy, delim);
 
+	array = malloc(sizeof(char *) * num_tokens);
+
 	while (token != NULL)
 	{
+		array[i] = token;
 		token = strtok(NULL, delim);
-		num_tokens++;
+		i++;
 	}
-	num_tokens++;
-
-	array = malloc(sizeof(char *) * num_tokens);
+	array[i] = NULL;
 
 	return (token);
 }
