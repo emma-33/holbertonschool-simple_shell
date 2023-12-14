@@ -1,7 +1,6 @@
 #include "main.h"
 /**
  * main - function wait
- * 
  * Return: Always 0
 */
 int _wait(void)
@@ -14,17 +13,17 @@ int _wait(void)
     if (child_pid == -1)
     {
         perror("Error:");
-        return (1);
+        return (-1);
     }
     if (child_pid == 0)
     {
     if (execmd(argv) == -1)
     {
-        return (1);
+        return (-1);
     }
     else
     {
         wait(&status);
     }
     return (0);
-}
+    }
