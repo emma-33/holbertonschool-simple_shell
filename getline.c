@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * getline - function that getline
+ * getline function
  * 
  * Return: numbers of charactère
 */
@@ -14,6 +14,4 @@ int _getline(char *lineptr, size_t *n)
         return (-1);
     }
 
-
-    return (count_char);
 }
