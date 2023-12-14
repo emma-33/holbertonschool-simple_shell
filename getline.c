@@ -1,6 +1,10 @@
 #include "main.h"
 /**
- * getline function
+ * getline function that reads an entire line from stream and
+ *  stores the address of the buffer
+ *  containing the text in *lineptr
+ * @lineptr: line to print
+ * @n:size of allocated memory
  * 
  * Return: numbers of charactère
 */
@@ -13,5 +17,5 @@ int _getline(char *lineptr, size_t *n)
     {
         return (-1);
     }
-
+    return (count_char);
 }
