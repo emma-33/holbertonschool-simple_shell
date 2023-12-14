@@ -1,35 +1,38 @@
-#include <stdio.h>
+#include "main.h"
+
 /**
- * function main
- * 
- * Return: Always 0
+* function main
+*
+* Return: Always 0
 */
+int main(void)
 {
-    char *lineptr;
-    constant_char *delim;
-    size_t n;
+	char *lineptr;
 
-    printf("$");
+	const char *delim;
 
-    _getline (lineptr, n);
-    {
-        if (_getline == -1)
-        return (-1);
-    }
-    strtok (lineptr, delim, getline);
-    {
-        if (_strtok == -1)
-        return (-1);
+	size_t *n;
 
-    }
-    wait();
-    {
-        if (_wait == _1)
-        return (-1);
-    }
+	printf("$ ");
 
-    free (str_copy);
-    free (array);
-    return(0);
+	while (1)
+	{
+		_getline(lineptr, n);
 
+		if (_getline == -1)
+			return (-1);
+
+		_strtok(lineptr, delim, _getline);
+
+		if (_strtok == -1)
+			return (-1);
+
+		_wait();
+
+		if (_wait == -1)
+			return (-1);
+
+	}
+	 //free dans les fonctions
+	return (0);
 }

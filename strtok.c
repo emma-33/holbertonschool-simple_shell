@@ -35,5 +35,8 @@ char *_strtok(char *str, const char *delim, ssize_t count_char)
 	}
 	array[i] = NULL;
 
+	free(str_copy);
+	free(array);
+
 	return (token);
 }
