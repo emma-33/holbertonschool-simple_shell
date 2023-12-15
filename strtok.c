@@ -3,40 +3,38 @@
 /**
 * _strtok - parses the tokens
 * @str: string to parse
+* @str_copy: copy of str
 * @delim: character delimiter
-* @count_char: number of chararcters
 * Return: pointer to first token of the string
 */
-char *_strtok(char *str, const char *delim, ssize_t count_char)
+char **_strtok(char *str, char *str_copy, const char *delim)
 {
 	char *token;
-
 	char **array;
-	char *str_copy = NULL;
+	unsigned int num_tokens = 0, i = 0;
 
-	int num_tokens = 0, i = 0;
-
-	str_copy = malloc(sizeof(char) * count_char);
-
-	if (str_copy == NULL)
-	{
-		return (-1);
-	}
-	strcpy(str_copy, str);
-	token = strtok(str_copy, delim);
-
-	array = malloc(sizeof(char *) * num_tokens);
-
+	token = strtok(str, delim);
+/* count du nombre de tokens*/
 	while (token != NULL)
 	{
-		array[i] = token;
+		num_tokens++;
+		token = strtok(NULL, delim);
+	}
+	num_tokens++;
+/*malloc du tableau array pour stocker les tokens*/
+	array = malloc(sizeof(char *) * num_tokens);
+	if (array == NULL)
+		return (NULL);
+
+/*mettre les tokens dans le tableau*/
+	token = strtok(str_copy, delim);
+	while (token != NULL)
+	{
+		array[i] = malloc(sizeof(char) * strlen(token));
+		strcpy(array[i], token);
 		token = strtok(NULL, delim);
 		i++;
 	}
 	array[i] = NULL;
-
-	free(str_copy);
-	free(array);
-
-	return (token);
+	return (array);
 }
