@@ -10,14 +10,13 @@ The user can then type a command and press Enter. The shell will then interpret 
 ##### **TEAM**
 
 This projet was relased by two student of HOLBERTON SCOOL who is
- Edem DJOSSOU @edemdj
- and Emma LATEYRON @emma-33
+Edem DJOSSOU @edemdj
+Emma LATEYRON @emma-33 
 
 We work on the campus every day and we make a Check in every morning and a Check out every afternoon. we divided some tasks, but the essential PROJET was written in collaboration.
 
                
-![HOLBERTON SCHOOL]
-(https://getlogovector.com/wp-content/uploads/2020/11/holberton-school-logo-vector.png)
+![HOLBERTON SCHOOL](https://getlogovector.com/wp-content/uploads/2020/11/holberton-school-logo-vector.png)
 
  
 ###### **COMPILATION**
