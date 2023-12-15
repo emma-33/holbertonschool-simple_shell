@@ -1,31 +1,29 @@
 #include "main.h"
+#include "main.h"
 /**
-* wait - function that suspends execution
-* of the calling process 
-* until one of its children terminates.
-* Return: Always 0
+* _wait - function wait
+* @argv: arguments
+* Return: 0 on success, -1 on fail
 */
-int _wait(void)
+int _wait(char **argv)
 {
-	pid_t child_pid;
-	int status;
-	char **argv;
-
+    pid_t child_pid;
+    int status;
     child_pid = fork();
     if (child_pid == -1)
     {
         perror("Error:");
-        return (-1);
+        return (1);
     }
-    if (child_pid == 0)
+    else if (child_pid == 0)
     {
-    if (execmd(argv) == -1)
-    {
-        return (-1);
+        if (execve(argv[0], argv, NULL) == -1)
+        {
+            perror("Couldn't execute");
+            return (-1);
+        }
     }
     else
-    {
         wait(&status);
-    }
     return (0);
-    }
+}

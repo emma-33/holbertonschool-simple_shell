@@ -13,3 +13,16 @@ We work on the campus every day and we make a Check in every morning and a Check
 
                 FILES
 
+1 - main.c : main function simple shell
+2 - main.h : Header file, contains all prototypes
+3 - exec.c : function for excecute the program
+4 - getline.c : function that get a line should be display
+5 - strtok.c : function for tokenise
+6 - wait.c : function that wait
+7 - AUTHORS : contains the Authors of this projet
+8 - man_1_simple_shell : a man
+9 - README.md
+
+
+
+                
