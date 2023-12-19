@@ -5,10 +5,10 @@
 */
 void printEnvironment()
 {
+    int i;
     extern char **environ;
-    for (int i = 0; environ[i] != NULL; i++)
+    for (i = 0; environ[i] != NULL; i++)
     {
-        print("%s", environ[i]);
+        printEnvironment("%s\n", environ[i]);
     }
-
 }
