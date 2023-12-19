@@ -16,9 +16,7 @@ int loop(void)
 		printf("$ ");
 		/*on récupère la commande entrée par l'user(lineptr)*/
 		count_char = getline(&lineptr, &count, stdin);
-		/*on fait une copie de la commande lineptr*/
-		lineptr_copy = malloc(sizeof(char) * count_char);
-		strcpy(lineptr_copy, lineptr);
+		
 		if (count_char ==  -1)
 		{
 			perror("Exiting shell");
@@ -27,6 +25,14 @@ int loop(void)
 		else
 		{
 			if (strcmp(lineptr, "exit\n") == 0)
+            {
+                exit(EXIT_SUCCESS);
+            }
+            /*on fait une copie de la commande lineptr*/
+            lineptr_copy = malloc(sizeof(char) * count_char);
+		strcpy(lineptr_copy, lineptr);
+            token = _strtok(lineptr, lineptr_copy, "\n");
+
 			{
 				exit(EXIT_SUCCESS);
 			}

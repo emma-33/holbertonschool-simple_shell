@@ -37,3 +37,4 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
 | wait.c | function that wait                    |
 | man    | a man page                            |
 |        |
+

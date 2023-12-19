@@ -7,7 +7,7 @@
 #include <unistd.h>
 #include <sys/types.h>
 #include <sys/wait.h>
-
+extern char **environ;
 char **_strtok(char *str, char *str_copy, const char *delim);
 int execmd(char *argv[]);
 int _wait(char **argv);
