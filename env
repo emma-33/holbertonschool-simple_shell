@@ -7,6 +7,8 @@ void printEnvironment()
 {
     extern char **environ;
     for (int i = 0; environ[i] != NULL; i++)
-    {print("%s", environ[i]);}
+    {
+        print("%s", environ[i]);
+    }
 
 }
