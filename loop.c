@@ -17,16 +17,19 @@ int loop(void)
 		count_char = getline(&line_ptr, &count, stdin);
 		if (count_char == -1)
 		{
+			free(line_ptr);
 			exit(EXIT_SUCCESS);
 		}
 		if (strcmp(line_ptr, "exit\n") == 0)
 		{
+			free(line_ptr);
 			exit(EXIT_SUCCESS);
 		}
 		ex = _wait(line_ptr);
 		if (ex == -1)
 			perror("Execution Error");
 		free(line_ptr);
+		line_ptr = NULL;
 	}
 	return (ex);
 }

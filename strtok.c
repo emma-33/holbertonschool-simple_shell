@@ -8,7 +8,7 @@ char **_strtok(char *str)
 {
 	char **array = NULL;
 
-	char *token = NULL;
+	char *token = NULL, *str_cpy = strdup(str);
 
 	unsigned int num_tokens = 0, i = 0;
 
@@ -28,7 +28,7 @@ char **_strtok(char *str)
 		exit(EXIT_FAILURE);
 	}
     /*mettre les tokens dans le tableau*/
-	token = strtok(str, " ");
+	token = strtok(str_cpy, " \n");
 	while (token != NULL)
 	{
 		array[i] = strdup(token);
@@ -36,5 +36,6 @@ char **_strtok(char *str)
 		token = strtok(NULL, " \n");
 	}
 	array[i] = NULL;
+	free(str_cpy);
 	return (array);
 }

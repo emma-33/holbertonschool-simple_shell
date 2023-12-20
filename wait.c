@@ -8,12 +8,11 @@ int _wait(char *line_ptr)
 {
 	char **args = NULL, *path = NULL;
 	pid_t child_pid;
-	int status, exit_stat = 0;
+	int status, exit_stat = 0, i;
 
 	args = _strtok(line_ptr);
 	if (args == NULL)
 		return (-1);
-
 	if (line_ptr[0] == '/')
 		path = strdup(line_ptr);
 	else
@@ -35,6 +34,11 @@ int _wait(char *line_ptr)
 	{
 		wait(&status);
 	}
+	for (i = 0; args[i]; i++)
+		free(args[i]);
+	free(args);
+	args = NULL;
 	free(path);
+	path = NULL;
 	return (exit_stat);
 }
