@@ -7,10 +7,14 @@
 #include <unistd.h>
 #include <sys/types.h>
 #include <sys/wait.h>
+#include <sys/stat.h>
+
 extern char **environ;
-char **_strtok(char *str, char *str_copy, const char *delim);
-int execmd(char *argv[]);
-int _wait(char **argv);
+
 int loop(void);
+int _wait(char *line_input);
+char **_strtok(char *str);
+char **path_strtok(char *path);
+char *get_path(char *command);
 
 #endif

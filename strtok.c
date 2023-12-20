@@ -1,39 +1,39 @@
 #include "main.h"
-
 /**
-* _strtok - parses the tokens
+* _strtok - parses the string into tokens
 * @str: string to parse
-* @str_copy: copy of str
-* @delim: character delimiter
 * Return: pointer to first token of the string
 */
-char **_strtok(char *str, char *str_copy, const char *delim)
+char **_strtok(char *str)
 {
-	char *token;
-	char **array;
+	char **array = NULL;
+
+	char *token = NULL;
+
 	unsigned int num_tokens = 0, i = 0;
 
-	token = strtok(str, delim);
-/* count du nombre de tokens*/
+	token = strtok(str, " \n");
+	/* count du nombre de tokens*/
 	while (token != NULL)
 	{
 		num_tokens++;
-		token = strtok(NULL, delim);
+		token = strtok(NULL, " \n");
 	}
 	num_tokens++;
-/*malloc du tableau array pour stocker les tokens*/
+    /*malloc du tableau array pour stocker les tokens*/
 	array = malloc(sizeof(char *) * num_tokens);
 	if (array == NULL)
-		return (NULL);
-
-/*mettre les tokens dans le tableau*/
-	token = strtok(str_copy, delim);
+	{
+		perror("Error in memory allocation");
+		exit(EXIT_FAILURE);
+	}
+    /*mettre les tokens dans le tableau*/
+	token = strtok(str, " ");
 	while (token != NULL)
 	{
-		array[i] = malloc(sizeof(char) * strlen(token));
-		strcpy(array[i], token);
-		token = strtok(NULL, delim);
+		array[i] = strdup(token);
 		i++;
+		token = strtok(NULL, " \n");
 	}
 	array[i] = NULL;
 	return (array);

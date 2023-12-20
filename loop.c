@@ -1,46 +1,34 @@
 #include "main.h"
+
 /**
 * loop - loops the prompt
 * Return: 0
 */
 int loop(void)
 {
-	char *lineptr = NULL, *lineptr_copy = NULL;
-
+	char *line_ptr = NULL;
+	int ex = 0, count_char = 0;
 	size_t count = 0;
-	ssize_t count_char;
-	char **token = NULL;
 
 	while (1)
 	{
 		printf("$ ");
-		/*on récupère la commande entrée par l'user(lineptr)*/
-		count_char = getline(&lineptr, &count, stdin);
-		
-		if (count_char ==  -1)
-		{
-			perror("Exiting shell");
-			return (-1);
-		}
-		else
-		{
-			if (strcmp(lineptr, "exit\n") == 0)
-            {
-                exit(EXIT_SUCCESS);
-            }
-            /*on fait une copie de la commande lineptr*/
-            lineptr_copy = malloc(sizeof(char) * count_char);
-		strcpy(lineptr_copy, lineptr);
-            token = _strtok(lineptr, lineptr_copy, "\n");
 
-			{
-				exit(EXIT_SUCCESS);
-			}
-			token = _strtok(lineptr, lineptr_copy, " \n");
-			_wait(token);
+		count_char = getline(&line_ptr, &count, stdin);
+		if (count_char == -1)
+		{
+			printf("Exiting shell...\n");
+			exit(EXIT_SUCCESS);
 		}
+		if (strcmp(line_ptr, "exit\n") == 0)
+		{
+			printf("Exiting shell...\n");
+			exit(EXIT_SUCCESS);
+		}
+		ex = _wait(line_ptr);
+		if (ex == -1)
+			perror("Execution Error");
+		free(line_ptr);
 	}
-	free(lineptr);
-	free(lineptr_copy);
-	return (0);
+	return (ex);
 }

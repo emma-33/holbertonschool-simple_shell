@@ -4,14 +4,18 @@
 
 hsh
 
-.SH SYNOPSIS
-
-#include "main.h"
-
-$ [COMMAND];
-
 .SH DESCRIPTION
 This program is a simplified version of the shell.
+
+.SH USAGE
+To use this program, run "./hsh". A prompt ("$") will be presented where you can type commands.
+
+- To execute a command, type the following and press enter.
+$ [COMMAND] [ARGUMENT(S)]
+- To exit the shell, type the following and press enter.
+$ exit
+
+
 
 .SH EXAMPLES
 

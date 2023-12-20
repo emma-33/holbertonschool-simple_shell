@@ -1,28 +1,40 @@
 #include "main.h"
 /**
 * _wait - function wait
-* @argv: arguments
+* @line_ptr: arguments
 * Return: 0 on success, -1 on fail
 */
-int _wait(char **argv)
+int _wait(char *line_ptr)
 {
+	char **args = NULL, *path = NULL;
 	pid_t child_pid;
+	int status, exit_stat = 0;
 
-	child_pid = fork();
-	if (child_pid == -1)
+	args = _strtok(line_ptr);
+	if (args == NULL)
+		return (-1);
+
+	if (line_ptr[0] == '/')
+		path = strdup(line_ptr);
+	else
+		path = get_path(args[0]);
+	if (path == NULL)
 	{
-		perror("Error:");
-		return (1);
+		return (-1);
+	}
+	child_pid = fork();
+	if (child_pid < 0)
+	{
+		return (-1);
 	}
 	else if (child_pid == 0)
 	{
-		if (execve(argv[0], argv, NULL) == -1)
-		{
-			perror("./hsh");
-			exit(EXIT_FAILURE);
-		}
+		exit_stat = execve(path, args, environ);
 	}
 	else
-		waitpid(child_pid, NULL, WUNTRACED);
-	return (0);
+	{
+		wait(&status);
+	}
+	free(path);
+	return (exit_stat);
 }
