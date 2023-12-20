@@ -17,12 +17,10 @@ int loop(void)
 		count_char = getline(&line_ptr, &count, stdin);
 		if (count_char == -1)
 		{
-			printf("Exiting shell...\n");
 			exit(EXIT_SUCCESS);
 		}
 		if (strcmp(line_ptr, "exit\n") == 0)
 		{
-			printf("Exiting shell...\n");
 			exit(EXIT_SUCCESS);
 		}
 		ex = _wait(line_ptr);

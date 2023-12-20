@@ -9,7 +9,7 @@
 char *get_path(char *command)
 {
 	char *env, *env_copy;
-	char path[1024]; /*forgot it, why it didn't work + strcpy*/
+	char path[1024];
 	char *token;
 	struct stat buffer;
 

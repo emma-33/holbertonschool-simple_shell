@@ -8,18 +8,19 @@ hsh
 This program is a simplified version of the shell.
 
 .SH USAGE
-To use this program, run "./hsh". A prompt ("$") will be presented where you can type commands.
+To use this program, run "./hsh". A prompt ("$") will be presented to you where you can type commands.
 
 - To execute a command, type the following and press enter.
 $ [COMMAND] [ARGUMENT(S)]
 - To exit the shell, type the following and press enter.
 $ exit
-
-
+- To display environment variables, type the following and press enter.
+$ env
 
 .SH EXAMPLES
+$ ls
+AUTHORS  Flowchart.drawio  README.md  env.c  hsh  loop.c  main.c  main.h  man_1_simple_shell  path_strtok.c  strtok.c  wait.c
 
-.SH BUGS
 
 .SH AUTHORS
 
