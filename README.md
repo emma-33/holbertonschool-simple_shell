@@ -9,7 +9,7 @@ The user can then type a command and press Enter. The shell will then interpret 
 
 ##### **TEAM**
 
-This projet was relased by two student of HOLBERTON SCOOL who is:
+This projet was relased by two student of HOLBERTONSCOOL who is:
 
 Edem DJOSSOU @github edemdj
 
@@ -36,13 +36,14 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
 | wait.c        | function that wait                    |
 | man           | a man page                            |
 | env.c         | function to print environnement       |
-| loop.c        |  loop to brosw                        |
-|path_                                                  
-|strtok.c       |                                       |
+| loop.c        | loop to brosw                         |
+|path_strtok.c  | function that get path                |            
 
 
 
-######  **flowtchart**
+
+
+######  **FLOWCHART**
 
 <picture>
  <source media="(prefers-color-scheme: dark)" srcset="https://user-images.githubusercontent.com/25423296/163456776-7f95b81a-f1ed-45f7-b7ab-8fa810d529fa.png">
