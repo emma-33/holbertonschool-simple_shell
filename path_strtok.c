@@ -9,7 +9,7 @@
 char *get_path(char *command)
 {
 	char *env, *env_copy;
-	char path[1024]; /*forgot it, why it didn't work + strcpy*/
+	char path[1024];
 	char *token;
 	struct stat buffer;
 
@@ -30,32 +30,4 @@ char *get_path(char *command)
 	}
 	free(env_copy);
 	return (NULL);
-}
-
-/**
-* path_strtok - tokenize path
-* @path: full path
-* Return: array of pointers to path tokens
-*/
-
-char **path_strtok(char *path)
-{
-	char **array = NULL, *token = NULL;
-	int i = 0;
-
-	array = malloc(sizeof(char *) * 1024);
-	if (array == NULL)
-	{
-		perror("error in memory allocation");
-		exit(EXIT_FAILURE);
-	}
-	token = strtok(path, ":");
-	while (token != NULL)
-	{
-		array[i] = token;
-		token = strtok(NULL, ":");
-		i++;
-	}
-	array[i] = NULL;
-	return (array);
 }
