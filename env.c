@@ -4,12 +4,14 @@
  *
  * Return: always 0
 */
-void printEnvironnement()
+void printEnvironnement(void)
 {
     int i;
 
     for (i = 0; environ[i] != NULL; i++)
     {
-        printEnvironnement("%s\n", environ[i]);
+        printf("%s\n", environ[i]);
     }
 }
+
+

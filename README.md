@@ -30,11 +30,15 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
 
 | fuction|          description                  |
 |-----:  |---------------------------------------|
-| main.c | main function simpe shell             |
+| main.c | main function simple shell            |
 | main.h | Header file, contains all prototypes  |
 | exec.c | function for excecute the program     |
 | strtok | function for tokenise                 |
 | wait.c | function that wait                    |
 | man    | a man page                            |
-|        |
-
+| env.c  | function to print environnement       |
+| loop.c |  loop to brows                        |
+|path_                                           |
+|strtok.c|                                       |
+|        |                                       |
+|        |                                       | 

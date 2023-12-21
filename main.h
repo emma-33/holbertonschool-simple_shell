@@ -10,7 +10,7 @@
 #include <sys/stat.h>
 
 extern char **environ;
-
+void printEnvironnement(void);
 int loop(void);
 int _wait(char *line_input);
 char **_strtok(char *str);

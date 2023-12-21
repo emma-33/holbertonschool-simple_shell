@@ -25,6 +25,10 @@ int loop(void)
 			printf("Exiting shell...\n");
 			exit(EXIT_SUCCESS);
 		}
+		if (strcmp(line_ptr, "env\n") == 0)
+		{
+			printEnvironnement();
+		}
 		ex = _wait(line_ptr);
 		if (ex == -1)
 			perror("Execution Error");
