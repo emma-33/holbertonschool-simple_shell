@@ -12,7 +12,8 @@ int loop(void)
 
 	while (1)
 	{
-		printf("$ ");
+		if (isatty(fileno(stdin)))
+			printf("$ ");
 
 		count_char = getline(&line_ptr, &count, stdin);
 		if (count_char == -1)

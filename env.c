@@ -1,17 +1,17 @@
 #include "main.h"
 /**
- * main - Print the current environment variables.
- *
- * Return: always 0
+* printEnvironnement - Print the current environment variables.
+*
+* Return: always 0
 */
 void printEnvironnement(void)
 {
-    int i;
+	int i;
 
-    for (i = 0; environ[i] != NULL; i++)
-    {
-        printf("%s\n", environ[i]);
-    }
+	for (i = 0; environ[i] != NULL; i++)
+	{
+		printf("%s\n", environ[i]);
+	}
 }
 
 
