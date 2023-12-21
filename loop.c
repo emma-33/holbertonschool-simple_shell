@@ -7,7 +7,7 @@
 int loop(void)
 {
 	char *line_ptr = NULL;
-	int ex = 0, count_char = 0;
+	int ex = 0, count_char;
 	size_t count = 0;
 
 	while (1)
@@ -34,10 +34,8 @@ int loop(void)
 		}
 		ex = _wait(line_ptr);
 		if (ex == -1)
-		{
 			perror("./hsh");
-			free(line_ptr);
-		}
+
 		free(line_ptr);
 		line_ptr = NULL;
 	}
