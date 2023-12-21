@@ -28,17 +28,35 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
 ##### **FILES**
 
 
-| fuction|          description                  |
-|-----:  |---------------------------------------|
-| main.c | main function simple shell            |
-| main.h | Header file, contains all prototypes  |
-| exec.c | function for excecute the program     |
-| strtok | function for tokenise                 |
-| wait.c | function that wait                    |
-| man    | a man page                            |
-| env.c  | function to print environnement       |
-| loop.c |  loop to brows                        |
-|path_                                           |
-|strtok.c|                                       |
-|        |                                       |
-|        |                                       | 
+| fuction       |          description                  |
+|--------:      |---------------------------------------|
+| main.c        | main function simple shell            |
+| main.h        | Header file, contains all prototypes  |
+|strtok.c       | function for tokenise                 |
+| wait.c        | function that wait                    |
+| man           | a man page                            |
+| env.c         | function to print environnement       |
+| loop.c        |  loop to brosw                        |
+|path_                                                  
+|strtok.c       |                                       |
+
+
+
+######  **flowtchart**
+
+<picture>
+ <source media="(prefers-color-scheme: dark)" srcset="https://user-images.githubusercontent.com/25423296/163456776-7f95b81a-f1ed-45f7-b7ab-8fa810d529fa.png">
+ <source media="(prefers-color-scheme: light)" srcset="https://user-images.githubusercontent.com/25423296/163456779-a8556205-d0a5-45e2-ac17-42d089e3c3f8.png">
+ <img alt="YOUR-ALT-TEXT" src="https://user-images.githubusercontent.com/25423296/163456779-a8556205-d0a5-45e2-ac17-42d089e3c3f8.png">
+</picture>
+
+
+
+
+
+
+
+
+
+
+
