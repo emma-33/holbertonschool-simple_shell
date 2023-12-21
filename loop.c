@@ -32,7 +32,7 @@ int loop(void)
 		}
 		ex = _wait(line_ptr);
 		if (ex == -1)
-			perror("Execution Error");
+			perror("./hsh");
 		free(line_ptr);
 		line_ptr = NULL;
 	}
