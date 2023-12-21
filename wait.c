@@ -18,26 +18,21 @@ int _wait(char *line_ptr)
 	else
 		path = get_path(args[0]);
 	if (path == NULL)
-	{
 		return (-1);
-	}
+
 	child_pid = fork();
 	if (child_pid < 0)
-	{
 		return (-1);
-	}
 	else if (child_pid == 0)
-	{
 		exit_stat = execve(path, args, environ);
-	}
 	else
-	{
 		wait(&status);
-	}
+
 	for (i = 0; args[i]; i++)
 		free(args[i]);
 	free(args);
 	args = NULL;
+
 	free(path);
 	path = NULL;
 	return (exit_stat);
