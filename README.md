@@ -46,6 +46,4 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
 ######  **FLOWCHART**
 
 
-
-![Alt text](https://files.slack.com/files-pri/T0423U1MW21-F06B8TC15J7/flowchart_simple_shell.jpg)
-
+<source media="(prefers-color-scheme: light)" srcset="hhttps://files.slack.com/files-pri/T0423U1MW21-F06B8TC15J7/flowchart_simple_shell.jpg">
