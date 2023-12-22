@@ -7,7 +7,7 @@ The user can then type a command and press Enter. The shell will then interpret 
 
 
 
-##### **TEAM**
+##### **AUTHORS**
 
 This projet was relased by two students of HOLBERTON SCHOOL who are:
 
@@ -45,19 +45,5 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
 
 ######  **FLOWCHART**
 
-<picture>
- <source media="(prefers-color-scheme: dark)" srcset="https://user-images.githubusercontent.com/25423296/163456776-7f95b81a-f1ed-45f7-b7ab-8fa810d529fa.png">
- <source media="(prefers-color-scheme: light)" srcset="https://user-images.githubusercontent.com/25423296/163456779-a8556205-d0a5-45e2-ac17-42d089e3c3f8.png">
- <img alt="YOUR-ALT-TEXT" src="https://user-images.githubusercontent.com/25423296/163456779-a8556205-d0a5-45e2-ac17-42d089e3c3f8.png">
-</picture>
 
-
-
-
-
-
-
-
-
-
-
+<source media="(prefers-color-scheme: light)" srcset="hhttps://files.slack.com/files-pri/T0423U1MW21-F06B8TC15J7/flowchart_simple_shell.jpg">
