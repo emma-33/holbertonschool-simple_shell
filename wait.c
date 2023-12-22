@@ -17,28 +17,33 @@ int _wait(char *line_ptr)
 		path = strdup(line_ptr);
 	else
 		path = get_path(args[0]);
+
 	if (path == NULL)
 	{
+		free(args);
 		return (-1);
 	}
 	child_pid = fork();
 	if (child_pid < 0)
 	{
+		free(args);
+		free(path);
 		return (-1);
 	}
 	else if (child_pid == 0)
 	{
-		exit_stat = execve(path, args, environ);
+		if (execve(path, args, environ) == -1)
+		{
+			perror("./hsh");
+			exit_stat = -1;
+		}
 	}
 	else
-	{
 		wait(&status);
-	}
+
 	for (i = 0; args[i]; i++)
 		free(args[i]);
 	free(args);
-	args = NULL;
 	free(path);
-	path = NULL;
 	return (exit_stat);
 }

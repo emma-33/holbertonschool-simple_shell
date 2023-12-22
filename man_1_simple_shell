@@ -8,7 +8,7 @@
 This program is a simplified version of the shell.
 
 .SH USAGE
-To use this program, run "./hsh". A prompt ("$") will be presented to you where you can type commands.
+To use this program in interactive mode, run "./hsh". A prompt ("$") will be presented to you where you can type commands.
 
 .PP
 - To execute a command, type the following and press enter.
@@ -23,13 +23,27 @@ $ exit
 .PP 
 $ env
 
+.PP
+To use this program in non-interactive mode, type the following and press enter:
+.PP
+echo "[COMMAND] [ARGUMENT(S)]" | ./hsh
+
 .SH EXAMPLES
+In interactive mode : 
+.PP
 $ ls
 .PP
-AUTHORS  Flowchart.drawio  README.md  env.c  hsh  loop.c  main.c  main.h  man_1_simple_shell  path_strtok.c  strtok.c  wait.c
+AUTHORS README.md  env.c loop.c  main.c  main.h  man_1_simple_shell  path_strtok.c  strtok.c  wait.c
 
+.PP
+In non-interactive mode :
+.PP
+echo "/bin/ls" | ./hsh
+.PP
+AUTHORS README.md  env.c loop.c  main.c  main.h  man_1_simple_shell  path_strtok.c  strtok.c  wait.c
 
 .SH AUTHORS
 
 Djossou Edem
+.PP
 Lateyron Emma

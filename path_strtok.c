@@ -8,26 +8,30 @@
 
 char *get_path(char *command)
 {
-	char *env, *env_copy;
-	char path[1024];
-	char *token;
+	char *env, *env_copy = NULL;
+	char *path = NULL, *token = NULL;
+	char path_buffer[1024];
 	struct stat buffer;
 
 	env = getenv("PATH");
 	if (env == NULL)
 		return (NULL);
+
 	env_copy = strdup(env);
+	if (env_copy == NULL)
+		return (NULL);
+
 	token = strtok(env_copy, ":");
 	while (token != NULL)
 	{
-		sprintf(path, "%s/%s", token, command);
-		if (stat(path, &buffer) == 0)
+		snprintf(path_buffer, sizeof(path_buffer), "%s/%s", token, command);
+		if (stat(path_buffer, &buffer) == 0)
 		{
-			free(env_copy);
-			return (strdup(path));
+			path = strdup(path_buffer);
+			break;
 		}
 		token = strtok(NULL, ":");
 	}
 	free(env_copy);
-	return (NULL);
+	return (path);
 }
