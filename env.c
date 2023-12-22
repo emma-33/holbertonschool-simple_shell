@@ -13,5 +13,3 @@ void printEnvironnement(void)
 		printf("%s\n", environ[i]);
 	}
 }
-
-
