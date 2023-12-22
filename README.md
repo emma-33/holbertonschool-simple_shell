@@ -47,5 +47,7 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
 
 
 <picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://files.slack.com/files-pri/T0423U1MW21-F06B8TC15J7/flowchart_simple_shell.jpg">
+  <source media="(prefers-color-scheme: light)" srcset="https://files.slack.com/files-pri/T0423U1MW21-F06B8TC15J7/flowchart_simple_shell.jpg">
   <img alt="Shows an illustrated sun in light mode and a moon with stars in dark mode." src="https://files.slack.com/files-pri/T0423U1MW21-F06B8TC15J7/flowchart_simple_shell.jpg">
 </picture>
