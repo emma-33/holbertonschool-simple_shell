@@ -14,13 +14,13 @@ To use this program in interactive mode, run "./hsh". A prompt ("$") will be pre
 - To execute a command, type the following and press enter.
 .PP
 $ [COMMAND] [ARGUMENT(S)]
-.PP 
+.PP
 - To exit the shell, type the following and press enter.
 .PP
 $ exit
 .PP
 - To display environment variables, type the following and press enter.
-.PP 
+.PP
 $ env
 
 .PP
@@ -29,7 +29,7 @@ To use this program in non-interactive mode, type the following and press enter:
 echo "[COMMAND] [ARGUMENT(S)]" | ./hsh
 
 .SH EXAMPLES
-In interactive mode : 
+In interactive mode :
 .PP
 $ ls
 .PP

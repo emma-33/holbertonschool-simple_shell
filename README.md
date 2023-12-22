@@ -9,18 +9,18 @@ The user can then type a command and press Enter. The shell will then interpret 
 
 ##### **AUTHORS**
 
-This projet was relased by two student of HOLBERTONSCOOL who is:
+This projet was relased by two students of HOLBERTON SCHOOL who are:
 
 Edem DJOSSOU @github edemdj
 
-Emma LATEYRON @github emma-33 
+Emma LATEYRON @github emma-33
 
-We work on the campus every day and we make a Check in every morning and a Check out every afternoon. we divided some tasks, but the essential PROJET was written in collaboration.
+We work on the campus every day and we make a Check in every morning and a Check out every afternoon. we divided some tasks, but the essential PROJECT was written in collaboration.
 
-               
+
 ![HOLBERTON SCHOOL](https://getlogovector.com/wp-content/uploads/2020/11/holberton-school-logo-vector.png)
 
- 
+
 ###### **COMPILATION**
 
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
@@ -28,16 +28,16 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
 ##### **FILES**
 
 
-| fuction       |          description                  |
+| fuctions      |          description                  |
 |--------:      |---------------------------------------|
-| main.c        | main function simple shell            |
+| main.c        | main file                             |
 | main.h        | Header file, contains all prototypes  |
-|strtok.c       | function for tokenise                 |
-| wait.c        | function that wait                    |
-| man           | a man page                            |
-| env.c         | function to print environnement       |
-| loop.c        | loop to brosw                         |
-|path_strtok.c  | function that get path                |            
+|strtok.c       | function to tokenize strings          |
+| wait.c        | file that contains wait, fork and execve functions |
+| man_1_simple_shell | the man page                     |
+| env.c         | function to print environnement variables      |
+| loop.c        | loop the shell                        |
+|path_strtok.c  | function to get command path          |
 
 
 

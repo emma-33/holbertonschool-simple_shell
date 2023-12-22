@@ -13,21 +13,21 @@ char **_strtok(char *str)
 	unsigned int num_tokens = 0, i = 0;
 
 	token = strtok(str, " \n");
-	/* count du nombre de tokens*/
+
 	while (token != NULL)
 	{
 		num_tokens++;
 		token = strtok(NULL, " \n");
 	}
 	num_tokens++;
-    /*malloc du tableau array pour stocker les tokens*/
+
 	array = malloc(sizeof(char *) * num_tokens);
 	if (array == NULL)
 	{
-		perror("Error in memory allocation");
+		perror("./hsh");
 		exit(EXIT_FAILURE);
 	}
-    /*mettre les tokens dans le tableau*/
+
 	token = strtok(str_cpy, " \n");
 	while (token != NULL)
 	{
