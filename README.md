@@ -1,4 +1,4 @@
-###### **PROJET SIMPLE SHELL**
+###### **PROJECT SIMPLE SHELL**
 
 A shell is a program that provides a user interface to the operating system. It allows users to interact with the system by typing commands. The shell interprets these commands and executes them on behalf of the user.
 When a user logs into a system, the shell is typically the first program that is started. The shell then presents the user with a prompt, which is a symbol or sequence of symbols that indicates that the shell is ready to accept a command.
@@ -41,17 +41,17 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
 
 
 ###### **EXAMPLES**
-In interactive mode :
+In interactive mode :  
 
-$ ls
+$ ls  
 
-AUTHORS README.md  env.c loop.c  main.c  main.h  man_1_simple_shell  path_strtok.c  strtok.c  wait.c
+AUTHORS README.md  env.c loop.c  main.c  main.h  man_1_simple_shell  path_strtok.c  strtok.c  wait.c  
 
-In non-interactive mode :
+In non-interactive mode :  
 
-echo "/bin/ls" | ./hsh
+echo "/bin/ls" | ./hsh  
 
-AUTHORS README.md  env.c loop.c  main.c  main.h  man_1_simple_shell  path_strtok.c  strtok.c  wait.c
+AUTHORS README.md  env.c loop.c  main.c  main.h  man_1_simple_shell  path_strtok.c  strtok.c  wait.c  
 
 
 ######  **FLOWCHART**
