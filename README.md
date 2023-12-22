@@ -42,11 +42,15 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
 
 ###### **EXAMPLES**
 In interactive mode :
+
 $ ls
+
 AUTHORS README.md  env.c loop.c  main.c  main.h  man_1_simple_shell  path_strtok.c  strtok.c  wait.c
 
 In non-interactive mode :
+
 echo "/bin/ls" | ./hsh
+
 AUTHORS README.md  env.c loop.c  main.c  main.h  man_1_simple_shell  path_strtok.c  strtok.c  wait.c
 
 
